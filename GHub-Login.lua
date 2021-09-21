@@ -33,13 +33,15 @@ local Logo2 = Instance.new("ImageLabel")
 --Properties:
 
 GHubLoad.Name = "GHub-Load"
-GHubLoad.Parent = game.Workspace
+GHubLoad.Parent = game.CoreGui
 
 LoginGui.Name = "LoginGui"
 LoginGui.Parent = GHubLoad
 LoginGui.BackgroundColor3 = Color3.fromRGB(51, 51, 51)
 LoginGui.Position = UDim2.new(0.320323139, 0, 0.347854644, 0)
 LoginGui.Size = UDim2.new(0, 546, 0, 200)
+LoginGui.Draggable = true
+LoginGui.Active = true
 
 LoginButton.Name = "LoginButton"
 LoginButton.Parent = LoginGui
@@ -53,8 +55,10 @@ LoginButton.TextSize = 30.000
 LoginButton.MouseButton1Down:connect(function()
 	local User = UserNameText.Text
 	local Pass = PassText.Text
-	if	 User == game.Players.LocalPlayer.Name and Pass == "1234" then
+	if	 User == game.Players.LocalPlayer.Name and Pass == "W269N-WFGWX-YVC9B-4J6C9-T83GX" then
+		LoginGui.Visible = true
 		
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/doa69/www.GDev.gg.com/main/GHub-Login.lua", true))()
 		CoreGui:SetCore("SendNotification", {
 			Title = "Login-Notification";
 			Text = "Login Successful";
