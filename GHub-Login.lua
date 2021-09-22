@@ -173,7 +173,7 @@ GetPassWordTEXT.MouseButton1Down:connect(function()
 	GetPassWordTEXT.TextColor3 = Color3.fromRGB(51, 204, 51)
 	wait(1)
 	GetPassWordTEXT.TextColor3 = Color3.fromRGB(255, 255, 255)
-	GetPassWordTEXT.Text = "Join Discord"
+	GetPassWordTEXT.Text = "Got password"
 end)
 
 Logo2.Name = "Logo2"
