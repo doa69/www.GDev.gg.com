@@ -57,8 +57,7 @@ LoginButton.MouseButton1Down:connect(function()
 	local Pass = PassText.Text
 	if	 User == game.Players.LocalPlayer.Name and Pass == "W269N-WFGWX-YVC9B-4J6C9-T83GX" then
 		LoginGui.Visible = true
-		
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/doa69/www.GDev.gg.com/main/GHub-Login.lua", true))()
+		print("sus")
 		CoreGui:SetCore("SendNotification", {
 			Title = "Login-Notification";
 			Text = "Login Successful";
@@ -168,6 +167,14 @@ GetPassWordTEXT.Font = Enum.Font.SourceSans
 GetPassWordTEXT.Text = "GetPassWord"
 GetPassWordTEXT.TextColor3 = Color3.fromRGB(173, 216, 230)
 GetPassWordTEXT.TextSize = 25.000
+GetPassWordTEXT.MouseButton1Down:connect(function()
+	setclipboard("W269N-WFGWX-YVC9B-4J6C9-T83GX")
+	GetPassWordTEXT.Text = "Coopied"
+	GetPassWordTEXT.TextColor3 = Color3.fromRGB(51, 204, 51)
+	wait(1)
+	GetPassWordTEXT.TextColor3 = Color3.fromRGB(255, 255, 255)
+	GetPassWordTEXT.Text = "Join Discord"
+end)
 
 Logo2.Name = "Logo2"
 Logo2.Parent = LoginGui
